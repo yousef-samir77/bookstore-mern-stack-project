@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import BooksTable from "../components/home/BooksTable";
 import BooksCard from "../components/home/BooksCard"; // ← ready to use!
-
 import { MdOutlineAddBox } from "react-icons/md";
 
 const API_URL = "http://localhost:5000/books"; // ← easy to change later
@@ -39,7 +38,7 @@ const Home = () => {
   return (
     <div className="p-4">
       {/* HEADER */}
-      <div className="flex justify-etween items-center mb-8">
+      <div className="flex justify-between items-center mb-8">
         <h1 className="text-3xl font-bold">Books List</h1>
         <Link to="/books/create" aria-label="Add new book">
           <MdOutlineAddBox className="text-sky-800 text-4xl hover:text-sky-600 transition" />
