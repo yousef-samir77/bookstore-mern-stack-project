@@ -1,9 +1,15 @@
 import express from "express";
-import { PORT, mongoDBURL } from "./config.js";
+import dotenv from 'dotenv/config';
+import { PORT, mongoDBURL } from './config.js';
 import mongoose from "mongoose";
 import bookRoutes from "./routes/booksRoute.route.js";
 import cors from 'cors';
 const app = express();
+
+// Log the MongoDB URL to verify it's being read correctly
+/* console.log('ENV CHECK:', process.env.MONGODB_URL);
+console.log('FROM ENV:', process.env.MONGODB_URL);
+console.log('FROM CONFIG:', mongoDBURL); */
 
 // Enable CORS for all routes
 app.use(cors());
