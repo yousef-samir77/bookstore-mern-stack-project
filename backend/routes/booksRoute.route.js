@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
 // route for GET all books
 router.get("/", async (req, res) => {
   try {
-    const books = await Book.find({});
+    const books = await Book.find({}).limit(50);
     return res.status(200).json({
       count: books.length,
       data: books,
